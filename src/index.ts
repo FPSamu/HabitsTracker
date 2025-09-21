@@ -1,5 +1,6 @@
 import express from "express";
-import authRouter from './auth/routes/register';
+import registerRouter from './auth/routes/register';
+import loginRouter from './auth/routes/login';
 import { connectDB } from "./services/database.service";
 import dotenv from "dotenv";
 
@@ -10,7 +11,8 @@ const app = express();
 
 
 app.use(express.json());
-app.use('/auth', authRouter);
+app.use('/auth', registerRouter);
+app.use('/auth', loginRouter);
 
 app.get('/', (req, res) => {
     res.send('api working!');

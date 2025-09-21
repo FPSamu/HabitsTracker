@@ -7,13 +7,15 @@ export default class Habit {
     _id?: ObjectId;
     name: string;
     type: HabitType;
+    color: string
     config: Config;
     active: boolean;
 
-    constructor(user_id: ObjectId, name: string, type: HabitType, config: Config) {
+    constructor(user_id: ObjectId, name: string, type: HabitType, color: string, config: Config) {
         this.user_id = user_id;
         this.name = name;
         this.type = type;
+        this.color = color;
         this.config = config;
         this.active = true;
     }
