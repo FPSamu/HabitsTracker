@@ -7,10 +7,10 @@ export default class User {
     passwordHash: string;
     created_at: Date
 
-    constructor(name: string, email: string, passwordHash: string, created_at: Date) {
+    constructor(name: string, email: string, passwordHash: string) {
         this.name = name;
         this.email = email;
         this.passwordHash = passwordHash;
-        this.created_at = created_at;
+        this.created_at = new Date();
     }
 }
